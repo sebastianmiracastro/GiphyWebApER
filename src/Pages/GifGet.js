@@ -26,27 +26,26 @@ export const GifGet = () => {
             console.log(er);
         })
     }
-
-
-  return (
+    
+    return (
     <div className='ContentGiphy'>
-        <h1>¡Get Gif Of Api Giphy Developer API!</h1>
+        <h1 className='AppNameContent'>¡Get Gif Of Api Giphy Developer!</h1>
 
         <input className='inputGetGiphy' placeholder='Get Gifs Writing' onChange={getGiphy} type="text" />
-        
-        <div className=''>
-            {
-                Giphy.map( c => (
-                    <CardDesign key={c.id} 
-                    tittle={c.title}
-                    image = {c.images.downsized_medium.url}
-                    />
-                ))
-            }
+        <div className='ContainerCards'>
+            <div className='cardsContentGiphy'>
+                {
+                    Giphy.map( c => (
+                        <CardDesign key={c.id} 
+                        tittle={c.title}
+                        image = {c.images.downsized_medium.url}
+                        />
+                    ))
+                }
+            </div>
         </div>
-
     </div>
-  )
+    )
 }
 
 export default GifGet;

@@ -4,7 +4,7 @@ import '../App.css'
 export const CardDesign = ({ tittle, image }) => {
   return (
     <div className='CardContainerDesign'>
-        <h2>{tittle}</h2>
+        <h2 className='CardNameContent'>{tittle}</h2>
         <img src={image} alt="ImageContentGif" />
     </div>
   )
